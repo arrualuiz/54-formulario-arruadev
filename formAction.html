@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Inicial</title>
+  <title>Dados Recebidos</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
-<body>
+<body onload="mostrarDados()">
   <header>
-    <h1>Bem-vindo ao Meu Site</h1>
+    <h1>Dados Enviados</h1>
     <nav>
       <ul class="menu">
         <li><a href="index.html">Início</a></li>
@@ -19,10 +20,7 @@
   </header>
 
   <main>
-    <section>
-      <h2>Introdução</h2>
-      <p>Este é um site de exemplo desenvolvido em HTML, CSS e JavaScript puro.</p>
-    </section>
+    <section id="dados"></section>
   </main>
 
   <footer>

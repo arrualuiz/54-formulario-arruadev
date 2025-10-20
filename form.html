@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +7,38 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
-
 <body>
   <header>
-    <nav class="menu">
-      <a href="index.html">Início</a>
-      <a href="form.html">Formulário</a>
-      <a href="about.html">Sobre</a>
+    <h1>Formulário de Contato</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="form.html">Formulário</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Formulário de Contato</h1>
-
     <form action="formAction.html" method="get" onsubmit="return validarFormulario()">
-      <label>Nome: <input type="text" name="nome" id="nome" required></label><br>
-      <label>Email: <input type="email" name="email" id="email" required></label><br>
-      <label>Idade: <input type="number" name="idade" id="idade" min="1" max="120" required></label><br>
-      <input type="submit" value="Enviar">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" min="1" max="120" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
     </form>
   </main>
+
+  <footer>
+    <p>&copy; 2025 - Meu Site Exemplo</p>
+  </footer>
 </body>
 </html>
