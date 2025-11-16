@@ -1,34 +1,19 @@
-// Função de validação de formulário
 function validarFormulario() {
-  const nome = document.getElementById('nome').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const idade = document.getElementById('idade').value.trim();
-  const mensagem = document.getElementById('mensagem').value.trim();
+    const nome = document.getElementById("nome").value;
+    const telefone = document.getElementById("telefone").value;
 
-  if (!nome || !email || !idade || !mensagem) {
-    alert('Por favor, preencha todos os campos.');
-    return false;
-  }
+    const regexNome = /^[A-Za-zÀ-ÖØ-öø-ÿ ]+$/;
+    const regexTelefone = /^\(\d{2}\) \d{5}-\d{4}$/;
 
-  const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!regexEmail.test(email)) {
-    alert('Por favor, insira um e-mail válido.');
-    return false;
-  }
+    if (!regexNome.test(nome)) {
+        alert("Nome inválido! Use apenas letras.");
+        return false;
+    }
 
-  return true;
-}
+    if (!regexTelefone.test(telefone)) {
+        alert("Telefone inválido! Use o formato (XX) XXXXX-XXXX");
+        return false;
+    }
 
-// Função para exibir os dados enviados via GET
-function mostrarDados() {
-  const params = new URLSearchParams(window.location.search);
-  const dadosDiv = document.getElementById('dados');
-
-  let html = '<h2>Dados Recebidos:</h2><ul>';
-  params.forEach((valor, chave) => {
-    html += `<li><strong>${chave}:</strong> ${valor}</li>`;
-  });
-  html += '</ul>';
-
-  dadosDiv.innerHTML = html;
+    return true;
 }

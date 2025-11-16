@@ -1,30 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dados Recebidos</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Arrua DEV - Dados Recebidos</title>
 </head>
-<body onload="mostrarDados()">
-  <header>
-    <h1>Dados Enviados</h1>
-    <nav>
-      <ul class="menu">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="form.html">Formulário</a></li>
-        <li><a href="about.html">Sobre</a></li>
-      </ul>
+<body>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="form.html">Formulário</a></li>
+            <li><a href="about.html">Sobre</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <main>
-    <section id="dados"></section>
-  </main>
+    <div class="container">
+        <h2>Dados Recebidos</h2>
+        <div id="resultado"></div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 - Meu Site Exemplo</p>
-  </footer>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("resultado").innerHTML = `
+            <p><strong>Nome:</strong> ${params.get("nome")}</p>
+            <p><strong>Email:</strong> ${params.get("email")}</p>
+            <p><strong>Idade:</strong> ${params.get("idade")}</p>
+            <p><strong>Telefone:</strong> ${params.get("telefone")}</p>
+        `;
+    </script>
+
 </body>
 </html>
