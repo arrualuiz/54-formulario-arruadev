@@ -1,1 +1,49 @@
-<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><title>Arrua DEV - Formulário</title><link rel='stylesheet' href='css/style.css'><script src='js/main.js' defer></script></head><body><header><nav class='menu'><a href='index.html'>Início</a><a href='form.html'>Formulário</a><a href='about.html'>Sobre</a></nav></header><section class='container'><div class='card'><h2>Formulário</h2><form action='formAction.html' method='GET' onsubmit='return validarForm()'><label>Nome:</label><input type='text' id='nome' name='nome' required><label>Email:</label><input type='email' id='email' name='email' required><label>Idade:</label><input type='number' id='idade' name='idade' min='1' max='120' required><button type='submit'>Enviar</button></form></div></section></body></html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Menu -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="form.html">Formulário</a></li>
+      <li><a href="about.html">Sobre</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Formulário</h1>
+
+    <form action="formAction.html" method="GET">
+      <label>Nome</label>
+      <input type="text" name="nome" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Telefone</label>
+      <input type="telefone" name="telefone">
+
+      <label>Mensagem</label>
+      <textarea name="mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+  </main>
+  <!-- Rodapé -->
+  <footer>
+      <div id="rodape"></div>   
+      <!-- Assinatura -->
+        <p class="assinatura">
+        Desenvolvido por <span class="nome-assinatura">Arrua</span> 🚀
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
