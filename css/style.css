@@ -1,4 +1,4 @@
-/*  TEMA */
+/*  Tema Geral - Gradiente Azul/Preto */
 
 :root {
   --navy: #041226;
@@ -8,8 +8,6 @@
   --muted: #9fb6d0;
   --accent: #2b6fb3;
 }
-
-/* RESET E BASE  */
 
 * {
   margin: 0;
@@ -31,7 +29,7 @@ main {
   padding: 20px;
 }
 
-/* MENU GLOBAL */
+/* Menu */
 
 nav {
   width: 100%;
@@ -63,14 +61,14 @@ nav a:hover {
   color: var(--accent);
 }
 
-/*  TÍTULOS  */
+/*  Titúlos  */
 
 h1, h2 {
   text-align: center;
   margin-bottom: 20px;
 }
 
-/* CARDS GENÉRICOS */
+/* Cards */
 
 .card {
   background: var(--card);
@@ -87,7 +85,43 @@ h1, h2 {
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
-/* FORMULÁRIO */
+/* Histórico (cards quadrados */
+
+#historico {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.card-historico {
+  background: var(--card);
+  border: 1px solid #1e2b44;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin-bottom: 25px;
+  transition: 0.25s;
+}
+
+.card-historico p {
+  color: var(--white);
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.card-historico p small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.card-historico:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.45);
+}
+
+/* Formulário */
 
 form {
   width: 100%;
@@ -119,7 +153,7 @@ input:focus, textarea:focus, select:focus {
   border-color: var(--accent);
 }
 
-/* BOTAO */
+/* Botão */
 
 button {
   background: var(--accent);
@@ -136,26 +170,47 @@ button:hover {
   background: #3d85d9;
 }
 
-/*  RODAPÉ E ASSINATURA */
+/* Botão de Erro */
+.input-error {
+    border: 2px solid red !important; 
+    background-color: #3d1b1b !important; 
+}
+
+/* Mensagem de Erro */
+.error-message {
+    display: block; 
+    color: #ff6b6b; 
+    font-size: 0.9em;
+    margin-top: -15px; 
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.input-error {
+    border: 2px solid #ff6b6b !important;
+    background-color: #3d1b1b !important;
+}
+
+
+/*  Rodapé e Assinatura */
 .assinatura {
-    /* Posição Fixa, no fundo */
+    /* Posição Fixa no fundo */
     position: fixed;
     left: 50%;
-    /* Deixando-o bem na ponta, como você queria */
+
     bottom: 0.9px; 
     transform: translateX(-50%);
-    
-    /* Estilo do Texto */
+
     font-size: 14px;
     color: #6daaff;
     opacity: 0.9;
     letter-spacing: 0.5px;
     
-    z-index: 60; /* Camada para aparecer por cima do conteúdo */
+    z-index: 60; 
     background: transparent;
-    pointer-events: none; /* Impede que ele bloqueie cliques em itens abaixo dele (já que é só texto) */
+    pointer-events: none; 
 
-    /* Limpeza */
+    /* Ajustes */
     margin: 0;
     padding: 0;
 }
@@ -167,37 +222,6 @@ button:hover {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-/* Estilo do Botão de Resultados (Fica acima da assinatura) */
-.botao-flutuante {
-    /* Posicionamento Fixo, alinhado ao centro */
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    
-    /* Crucial: Posicionamento 40px acima da base para ficar acima da assinatura */
-    bottom: 40px; 
-    
-    /* Estilo de Botão */
-    padding: 8px 15px;
-    background-color: #6daaff; /* Fundo azul para o botão */
-    color: white;
-    text-decoration: none; /* Remove sublinhado */
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 65; /* Maior que a assinatura para ficar por cima */
-    
-    /* Habilita o clique */
-    pointer-events: auto; 
-    
-    transition: background-color 0.3s;
-}
-
-.botao-flutuante:hover {
-    background-color: #5599ff;
 }
 
 /* RESPONSIVIDADE */

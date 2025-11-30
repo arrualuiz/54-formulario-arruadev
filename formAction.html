@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Processando...</title>
-  <script src="js/form.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados do Formulário</title>
+    <link rel="icon" type="image/png" href="la.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <p style="color:white; text-align:center; margin-top:50px;">
-    Processando envio... Aguarde.
-  </p>
+  <!-- Menu -->
+  <nav class="menu">
+    <ul>
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="form.html">Formulário</a></li>
+      <li><a href="formAction.html">Resultados</a></li>
+      <li><a href="about.html">Sobre</a></li>
+    </ul>
+  </nav>
+    
+    <main>
+        <h1>Resultados do Envio GET</h1>
+        <div id="resultados">
+            <p>O JavaScript irá carregar os dados aqui...</p>
+        </div>
+    <!-- Container do histórico (preenchido pelo js quando existir) -->
+    <div id="historico"></div>
+    </main>
+
+  <!-- Rodapé -->
+  <footer>
+      <div id="rodape"></div>   
+      <!-- Assinatura -->
+        <p class="assinatura">
+        Desenvolvido por <span class="nome-assinatura">Arrua</span> 🚀
+      </p>
+    </footer>
+
+  <script src="js/form.js"></script>
+
 </body>
 </html>
